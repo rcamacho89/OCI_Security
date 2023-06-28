@@ -1,5 +1,5 @@
 variable "region" {}
-variable "tenancy_ocid" {}
+variable "compartment_id" {}
 variable "vault_name" {}
 variable "key_name" {}
 variable "secret_name" {}
