@@ -4,3 +4,8 @@ variable "user_ocid" {}
 variable "fingerprint" {}
 variable "private_key_path" {}
 variable "compartment_id" {}
+variable "vault_name" {}
+variable "key_name" {}
+variable "secret_name" {}
+variable "secret_content" {}
+variable "secret_description" {}
