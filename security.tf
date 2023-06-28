@@ -1,7 +1,7 @@
 resource "oci_kms_vault" "test_vault" {
     #Required
     compartment_id = var.compartment_id
-    display_name = "Test_Vault_Terraform"
+    display_name = var.vault_name
     vault_type = "DEFAULT"
 
     #Optional
@@ -10,7 +10,7 @@ resource "oci_kms_vault" "test_vault" {
 resource "oci_kms_key" "test_key" {
     #Required
     compartment_id = var.compartment_id
-    display_name = "Test_Key"
+    display_name = var.key_name
     key_shape {
         #Required
         algorithm = "AES"
@@ -29,8 +29,8 @@ resource "oci_vault_secret" "test_secret" {
         content_type = "BASE64"
 
         #Optional
-        content = "XPTO"
-        name = "Test_Secret"
+        content = var.secret_content
+        name = var.secret_name
     }
     secret_name = "Test_Secret_1"
     vault_id = oci_kms_vault.test_vault.id
@@ -41,7 +41,7 @@ resource "oci_vault_secret" "test_secret" {
     }
     
     #Optional
-    description = "Teste Secret 1"
+    description = var.secret_description
 }
 
 output management_endpoint {
