@@ -5,3 +5,4 @@ variable "key_name" {}
 variable "secret_name" {}
 variable "secret_content" {}
 variable "secret_description" {}
+variable "user_ocid" {}
