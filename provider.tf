@@ -1,5 +1,5 @@
 provider "oci" {
-#  region               = var.region
+  region               = "sa-saopaulo-1"
 #  tenancy_ocid         = var.tenancy_ocid
   user_ocid            = var.user_ocid
 #  fingerprint          = var.fingerprint
